@@ -3,18 +3,8 @@ body {
     
 }
 
-.header {
-    background-color: #B80C09;
-    font-family: "Saira", sans-serif;
-    color: #EFF2F1;
 
-}
-.navigation {
-    background-color: #B80C09;
-    font-family: "Saira", sans-serif;
-    margin: 0px;
-    
-}
+
 
 
 .main h2 {
@@ -34,7 +24,7 @@ body {
 .footer {grid-area:footer;}
 
 
-/* Mobile */
+/* Grid for Mobile */
 
 .grid {
     display:grid;
@@ -49,13 +39,44 @@ body {
 }
 
 .grid > * {
-    padding: 1em;
+    padding: 10px;
     border: 1px solid black;
     margin: 0px
     
 }
 
+/*Header*/
+
+.header {
+    background-color: grey;
+    font-family: "Saira", sans-serif;
+    font-weight: 100;
+    color: #EFF2F1;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    padding: 0px;
+    height: 6em;
+    margin: -10px;
+    letter-spacing: .3em;
+    
+}
+.header h1 {
+  font-weight: 400;
+}
+
+
 /*Navigation*/
+
+
+.navigation {
+    background-color: #B80C09;
+    font-family: "Saira", sans-serif;
+    margin: 1em;
+    width: 96.5%;
+    border: 1px solid #B80C09;
+}
+
 
 .container {
   display:flex;
@@ -66,6 +87,7 @@ body {
   font-size: 30px;
   margin: 0px;
   padding: 10px;
+  
 }
 .container > li {
   background-color: #FF8C42;
@@ -73,7 +95,28 @@ body {
   border-radius: 30px;
   padding: .5em;
   margin: .3em;
-  
+  font-size: 20px;
+  white-space: nowrap;
+  width: 8em;
+  text-align: center;
+}
+.container > .about {
+  background-color: #2F2F2F;
+  color: white;
+}
+
+
+/*Footer*/
+
+.footer {
+  padding: 10px;
+  margin: auto 0px;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  color: white;
+  background-color: black;
+  opacity: 50%;
+
 }
 
 /* Tablet */
@@ -91,6 +134,8 @@ body {
 
 /* PC Monitor */
 
+
+
 @media only screen and (min-width: 960px) {
   .grid {
     display: grid;
@@ -105,6 +150,7 @@ body {
   .container {
     flex-direction: row;
     justify-content: space-around;
+    
   
   }
   .container > li {
@@ -113,8 +159,18 @@ body {
   border-radius: 20px;
   padding: 10px;
   margin: 0px;
-  flex-wrap: wrap;
-  
+  }
+  .container > .video:hover {
+    background-color: #EFF2F1;
+  }
+  .dropdown {
+    display:none;
+    position: absolute;
+    border: 1px solid black;
+    min-width: 7em;
+  }
+  .video:hover .dropdown {
+    display: block;
   }
   .main {
     margin: auto 10%;
