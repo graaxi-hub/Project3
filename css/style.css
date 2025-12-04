@@ -1,6 +1,8 @@
 body {
     background-color: #2F2F2F;
-    
+    margin: 0;
+    padding: 0;
+    width: 100vw;
 }
 
 
@@ -73,8 +75,8 @@ body {
 .navigation {
     background-color: #B80C09;
     font-family: "Saira", sans-serif;
-    margin: 1em;
-    width: 96.5%;
+    margin-top: 1em;
+   
     border: 1px solid #B80C09;
 }
 
@@ -87,18 +89,19 @@ body {
   text-align: center;
   font-size: 30px;
   margin: 0px;
-  padding: 10px;
+  padding: 5px;
   
 }
 .container > li {
   background-color: #FF8C42;
   border: 2px solid black;
   border-radius: 30px;
-  padding: .5em;
-  margin: .3em;
+  
   font-size: 20px;
   white-space: nowrap;
-  width: 8em;
+  width: 6em;
+  padding: .2em;
+  margin: .3em;
   text-align: center;
 }
 .container > .about {
@@ -179,25 +182,60 @@ body {
   .dropdown-content {
     display:none;
     position: absolute;
-
-    min-width: 7em;
     
-    padding: 0px;
+    
+    
   }
+  
+
+
   .dropdown-content a {
     display: block;
-    background-color: red;
-    border: 1px solid black;
-    text-decoration: none;
-    padding: .2em 1.8em;
-    color: black;
+    animation-name: dropdown;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0,.61,.37,1); /*Used Cubic-bezier.com, did a harsher ease out curve: https://cubic-bezier.com/#0,.61,.37,1 */
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
 
+    text-align: left;
+    background-color: #FF8C42;
+    text-decoration: none;
+    color: black;  
+    font-size: 20px;
+    width: 5.5em;
+    padding: .2em;
     
   }
+  .lastdd-content {
+    border-bottom: 1px solid black;
+  }
+  .dropdown-content a:hover {
+    background-color: #B80C09;
+  }
+
+    /*Animation*/
+  @keyframes dropdown {
+    from {
+      
+      height: 0px;
+      opacity: 0%;
+      
+    }
+    to {
+      
+      height: 1.7em;
+      opacity: 100%;
+      
+    }
+  }
+
   .dropdown:hover .dropdown-content {
     display: block;
     
   }
+
 
 
 
