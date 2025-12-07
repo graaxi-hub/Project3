@@ -50,7 +50,7 @@ body { /*OVERALL BODY*/
     font-family: "Saira", sans-serif;
     font-weight: 300;
     color: var(--white);
-    padding: 0px;
+    padding: 1rem;
     margin: 0px;
     letter-spacing: .3em;
 }
@@ -61,21 +61,28 @@ body { /*OVERALL BODY*/
   display: flex;
   flex-direction: column; /*Change in media query*/
   
-  margin: 0px;
-  padding: 0px;
 
-  text-align: center;
+  margin: 0px;
+  padding: 0px 3rem;
+
+
+  text-align: left;
   list-style: none;
   
   background-color: var(--red);
 }
+
 .container li {  /* Styling for every item in the navigation list */
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Saira", sans-serif;
   font-weight: 100;
   margin: .7rem;
+  padding: .4rem;
+  padding-left: 3rem;
   border-radius: 1rem;
-  border: 2px solid var(--black)
+  border: 2px solid var(--black);
+  
+  
 }
 
 .container .dropdown { /*Styling for the dropdownable nav list items*/
@@ -88,12 +95,84 @@ body { /*OVERALL BODY*/
   color: var(--white);
   
 }
-
-
-.dropdown-content {   /*Dropdown not showing without hovering*/
-    display:none;
-    position: absolute;   
+.fa-bars { /*Burger menu icon styling, remove this in media query*/
+  padding-left: 10rem; 
 }
+
+
+
+
+
+/* Dropdown */ 
+
+    .container > .dropdown:hover {
+      background-color: var(--white);
+    }
+    .dropdown {
+      cursor: pointer;
+      border: none;
+      
+    }
+
+
+    .dropdown-content { /*Dropdown not showing without hovering*/
+      display:none;
+      position: absolute;   
+    }
+    
+
+
+    .dropdown-content a {
+      display: block;
+      animation-name: dropdown;
+      animation-duration: .5s;
+      animation-fill-mode: both;
+      animation-timing-function: cubic-bezier(0,.61,.37,1); /*Used Cubic-bezier.com, did a harsher ease out curve: https://cubic-bezier.com/#0,.61,.37,1 */
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+      border-top: 1px solid black;
+
+      text-align: left;
+      background-color: #FF8C42;
+      text-decoration: none;
+      color: black;  
+      font-size: 20px;
+      width: 5.5em;
+      padding: .2em;
+      
+    }
+    .lastdd-content {
+      border-bottom: 1px solid black;
+    }
+    .dropdown-content a:hover {
+      background-color: var(--red)
+    }
+
+      /*Animation*/
+    @keyframes dropdown {
+      from {
+        
+        height: 0px;
+        opacity: 0%;
+        
+      }
+      to {
+        
+        height: 1.7em;
+        opacity: 100%;
+        
+      }
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      
+    }
+
+
+
+
+
 
 /*Main Styling*/
 
