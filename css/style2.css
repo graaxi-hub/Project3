@@ -1,0 +1,117 @@
+/*Colour variables*/
+:root {
+  --orange: #FF8C42;
+  --red: #B80C09;
+  --white: #FFF2F1;
+  --grey: #2F2F2F;
+  --black: #000F08;
+}
+
+
+
+
+body { /*OVERALL BODY*/
+    background-color: var(--grey);
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Assigned names for grid*/
+.header {grid-area:header;}
+.main {grid-area:main;}
+.footer {grid-area:footer;}
+
+/*The Overall Grid (Mobile)*/
+
+.grid {
+    display:grid;
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer';   
+    
+    min-height: 100vh;
+}
+
+/*Header - flex layout with both headline and navigation*/
+
+.header {  
+    display: flex;
+    flex-direction: column; /*Change this value in media query for desktop*/
+    
+}
+
+/*Header styling, without the navigation*/
+
+.headline {
+    background-color: var(--orange);
+    font-family: "Saira", sans-serif;
+    font-weight: 300;
+    color: var(--white);
+    padding: 0px;
+    margin: 0px;
+    letter-spacing: .3em;
+}
+
+/*Navigation*/
+
+.container {
+  display: flex;
+  flex-direction: column; /*Change in media query*/
+  
+  margin: 0px;
+  padding: 0px;
+
+  text-align: center;
+  list-style: none;
+  
+  background-color: var(--red);
+}
+.container li {  /* Styling for every item in the navigation list */
+  font-size: 2rem;
+  font-family: "Saira", sans-serif;
+  font-weight: 100;
+  margin: .7rem;
+  border-radius: 1rem;
+  border: 2px solid var(--black)
+}
+
+.container .dropdown { /*Styling for the dropdownable nav list items*/
+  background-color: var(--orange);
+  
+}
+
+.container .notdrop { /*Styling for the NOT dropdownable nav list items*/
+  background-color: var(--grey);
+  color: var(--white);
+  
+}
+
+
+.dropdown-content {   /*Dropdown not showing without hovering*/
+    display:none;
+    position: absolute;   
+}
+
+/*Main Styling*/
+
+.main h2 {
+  font-family: "Saira", sans-serif;
+  color: var(--orange);
+}
+
+.main p {
+  font-family: "Raleway", sans-serif;
+  color: var(--white)
+}
+
+/*Footer Styling*/
+
+.footer {
+  font-family: "Raleway", sans-serif;
+  border-top: 2px solid var(--black);
+  border-bottom: 2px solid var(--black);
+  
+}

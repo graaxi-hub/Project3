@@ -3,11 +3,8 @@ body {
     margin: 0;
     padding: 0;
     width: 100vw;
+
 }
-
-
-
-
 
 .main h2 {
   font-family: "Saira", sans-serif;
@@ -41,8 +38,7 @@ body {
 }
 
 .grid > * {
-    padding: 10px;
-    border: 1px solid black;
+    padding: 0px;
     margin: 0px
     
 }
@@ -55,17 +51,18 @@ body {
     font-family: "Saira", sans-serif;
     font-weight: 100;
     color: #EFF2F1;
-    text-align: center;
-    width: 100%;
-    font-size: 20px;
+    text-align: center;    
     padding: 0px;
-    height: 6em;
-    margin: -10px;
+    margin: 0px;
     letter-spacing: .3em;
+    display: flex;
+    width: 100vw;
     
 }
 .header h1 {
   font-weight: 400;
+  font-size: clamp (2vh, 3vh, 4vh);
+  
 }
 
 
@@ -75,39 +72,39 @@ body {
 .navigation {
     background-color: #B80C09;
     font-family: "Saira", sans-serif;
-    margin-top: 1em;
-   
+    margin-top: 1em;   
     border: 1px solid #B80C09;
+    display: flex;
+    
 }
 
 
 .container {
-  display:flex;
   list-style: none;
-  
-  flex-direction: column;
   text-align: center;
-  font-size: 30px;
-  margin: 0px;
-  padding: 5px;
+  
+  
   
 }
 .container > li {
   background-color: #FF8C42;
   border: 2px solid black;
-  border-radius: 30px;
+  border-radius: 20px;
+  font-size: 2rem;
+  margin: 1rem;
   
-  font-size: 20px;
-  white-space: nowrap;
-  width: 6em;
-  padding: .2em;
-  margin: .3em;
   text-align: center;
 }
-.container > .about {
+
+
+.container > .notdrop {
   background-color: #2F2F2F;
   color: white;
 }
+  .dropdown-content {
+    display:none;
+    position: absolute;   
+  }
 
 
 /*Footer*/
@@ -134,6 +131,7 @@ body {
     'main main main'
     'footer footer footer';
     background-color: red;
+    
   }
 }
 
@@ -147,24 +145,30 @@ body {
   .grid {
     display: grid;
     grid-template-areas: 
+    'header header navigation'
+    'main main main'
+    'footer footer footer';
+    /* grid-template-areas: 
     'header header header'
     'none none navigation'
     'main main main'
-    'footer footer footer';
+    'footer footer footer'; */
     grid-template-columns: auto 50%;
     
   }
   
   .container {
-    flex-direction: row;
-    justify-content: space-around;   
+    display: flex;
+    margin: auto;
+    
   }
   .container > li {
     background-color: #FF8C42;
     border: 2px solid black;
     border-radius: 20px;
-    padding: 10px;
-    margin: 0px;
+    padding: 1em;
+    
+    
   }
 
   /* Dropdown */ 
@@ -181,10 +185,7 @@ body {
 
   .dropdown-content {
     display:none;
-    position: absolute;
-    
-    
-    
+    position: absolute;   
   }
   
 
@@ -192,8 +193,8 @@ body {
   .dropdown-content a {
     display: block;
     animation-name: dropdown;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+    animation-duration: .5s;
+    animation-fill-mode: both;
     animation-timing-function: cubic-bezier(0,.61,.37,1); /*Used Cubic-bezier.com, did a harsher ease out curve: https://cubic-bezier.com/#0,.61,.37,1 */
     border-left: 1px solid black;
     border-right: 1px solid black;
@@ -235,11 +236,6 @@ body {
     display: block;
     
   }
-
-
-
-
-
 
   .main {
     margin: auto 10%;
