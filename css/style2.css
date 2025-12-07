@@ -1,9 +1,17 @@
 /*Colour variables*/
 :root {
   --orange: #FF8C42;
+  --darkorange: #FF771F;
+  --lightorange: #FFA064;
+  --shadoworange: #DA722F;
   --red: #B80C09;
+  --otherred: #BD2220;
+  --darkred: #941816;
   --white: #FFF2F1;
   --grey: #2F2F2F;
+  --lightgrey: #4C4C4C;
+  --othergrey: #535353;
+  --lightergrey: #848484;
   --black: #000F08;
 }
 
@@ -32,7 +40,7 @@ body { /*OVERALL BODY*/
     'main'
     'footer';   
     
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 /*Header - flex layout with both headline and navigation*/
@@ -41,18 +49,23 @@ body { /*OVERALL BODY*/
     display: flex;
     flex-direction: column; /*Change this value in media query for desktop*/
     
+    
+    
 }
 
 /*Header styling, without the navigation*/
 
 .headline {
-    background-color: var(--orange);
+    background-image: linear-gradient(var(--darkred), var(--otherred), var(--otherred), var(--darkred)); /*Headline gradient*/
+    /* background-color: var(--orange); */
     font-family: "Saira", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     color: var(--white);
     padding: 1rem;
     margin: 0px;
     letter-spacing: .3em;
+    
+    
 }
 
 /*Navigation*/
@@ -63,19 +76,23 @@ body { /*OVERALL BODY*/
   
 
   margin: 0px;
-  padding: 0px 3rem;
-
+  padding: 0px 4rem;
+  
 
   text-align: left;
   list-style: none;
   
-  background-color: var(--red);
+  background-color: var(--lightgrey); 
+
+  border-bottom: 2px solid var(--black);
+  border-top: 2px solid var(--black);
+  
 }
 
 .container li {  /* Styling for every item in the navigation list */
   font-size: 1.5rem;
   font-family: "Saira", sans-serif;
-  font-weight: 100;
+  font-weight: 200;
   margin: .7rem;
   padding: .4rem;
   padding-left: 3rem;
@@ -83,10 +100,11 @@ body { /*OVERALL BODY*/
   border: 2px solid var(--black);
   
   
+  
 }
 
 .container .dropdown { /*Styling for the dropdownable nav list items*/
-  background-color: var(--orange);
+  background-color: var(--darkorange);
   
 }
 
@@ -94,9 +112,21 @@ body { /*OVERALL BODY*/
   background-color: var(--grey);
   color: var(--white);
   
+  
 }
+.container .notdrop:hover {
+  box-shadow: inset 0 1px 3px var(--lightergrey), 1px 1px 5px var(--grey);
+  background-color: var(--othergrey);
+}
+
+
+
 .fa-bars { /*Burger menu icon styling, remove this in media query*/
-  padding-left: 10rem; 
+  
+  float: right;
+  padding: .4rem;
+  padding-right: 2rem;
+  
 }
 
 
@@ -106,7 +136,8 @@ body { /*OVERALL BODY*/
 /* Dropdown */ 
 
     .container > .dropdown:hover {
-      background-color: var(--white);
+      background-color: var(--orange);
+      box-shadow: inset 0 1px 3px var(--white), 0 1px 2px var(--grey);
     }
     .dropdown {
       cursor: pointer;
@@ -176,8 +207,14 @@ body { /*OVERALL BODY*/
 
 /*Main Styling*/
 
+.main {
+  padding: 2rem;
+  
+}
+
 .main h2 {
   font-family: "Saira", sans-serif;
+  text-align: center;
   color: var(--orange);
 }
 
@@ -190,7 +227,49 @@ body { /*OVERALL BODY*/
 
 .footer {
   font-family: "Raleway", sans-serif;
+  text-align: left;
   border-top: 2px solid var(--black);
   border-bottom: 2px solid var(--black);
+  padding-left: 2rem;
   
+}
+.footer p {
+  padding: 0px;
+  margin: .3rem;
+}
+
+/* Tablet */
+
+@media only screen and (min-width: 550px) and (max-width: 959px){
+  .grid {
+    grid-template-areas: 
+    'header header header'
+    'main main main'
+    'footer footer footer';
+    background-color: red;
+    
+  }
+}
+
+/* Desktop */
+
+
+
+@media only screen and (min-width: 960px) {
+  .grid {
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'main main main'
+    'footer footer footer';
+  
+    grid-template-columns: auto 50%;
+  
+    
+  }
+  .container {
+    display: flex;
+    flex-direction: row; 
+    
+  }
 }
