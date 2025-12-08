@@ -22,6 +22,7 @@ body { /*OVERALL BODY*/
     background-color: var(--grey);
     margin: 0;
     padding: 0;
+    
 }
 
 
@@ -40,7 +41,8 @@ body { /*OVERALL BODY*/
     'main'
     'footer';   
     
-    /* min-height: 100vh; */
+    
+    
 }
 
 /*Header - flex layout with both headline and navigation*/
@@ -63,9 +65,27 @@ body { /*OVERALL BODY*/
     color: var(--white);
     padding: 1rem;
     margin: 0px;
-    letter-spacing: .3em;
+
     
     
+}
+
+.headlinetext1 {
+  font-size: 1rem;
+  letter-spacing: .6em;  
+  
+}
+.headlinetext2 {
+  
+  text-align: center;
+  font-size: clamp(3rem, 2.5vw, 3.3rem);
+  letter-spacing: .3em;  
+  text-shadow: 2px 2px 5px var(--grey);
+}
+.headlinetext3 {
+  font-size: 1rem;
+  text-align: right;
+  letter-spacing: .6em;  
 }
 
 /*Navigation*/
@@ -76,7 +96,7 @@ body { /*OVERALL BODY*/
   
 
   margin: 0px;
-  padding: 0px 4rem;
+  padding: 0px 4vw;
   
 
   text-align: left;
@@ -86,6 +106,7 @@ body { /*OVERALL BODY*/
 
   border-bottom: 2px solid var(--black);
   border-top: 2px solid var(--black);
+
   
 }
 
@@ -117,15 +138,18 @@ body { /*OVERALL BODY*/
 .container .notdrop:hover {
   box-shadow: inset 0 1px 3px var(--lightergrey), 1px 1px 5px var(--grey);
   background-color: var(--othergrey);
+  font-weight: 400;
+  cursor: pointer;
 }
 
 
 
-.fa-bars { /*Burger menu icon styling, remove this in media query*/
+.fa-bars { /*Burger menu icon styling, remove this in media query?*/
   
   float: right;
   padding: .4rem;
   padding-right: 2rem;
+  
   
 }
 
@@ -138,6 +162,7 @@ body { /*OVERALL BODY*/
     .container > .dropdown:hover {
       background-color: var(--orange);
       box-shadow: inset 0 1px 3px var(--white), 0 1px 2px var(--grey);
+      font-weight: 400;
     }
     .dropdown {
       cursor: pointer;
@@ -149,34 +174,52 @@ body { /*OVERALL BODY*/
     .dropdown-content { /*Dropdown not showing without hovering*/
       display:none;
       position: absolute;   
+      
     }
-    
 
 
     .dropdown-content a {
       display: block;
+
+
       animation-name: dropdown;
       animation-duration: .5s;
       animation-fill-mode: both;
       animation-timing-function: cubic-bezier(0,.61,.37,1); /*Used Cubic-bezier.com, did a harsher ease out curve: https://cubic-bezier.com/#0,.61,.37,1 */
+      
+      
+      
       border-left: 1px solid black;
       border-right: 1px solid black;
       border-top: 1px solid black;
 
       text-align: left;
-      background-color: #FF8C42;
+      background-color: var(--darkorange);
       text-decoration: none;
       color: black;  
       font-size: 20px;
-      width: 5.5em;
+      width: 13.2rem;
       padding: .2em;
+      padding-left: 2rem;
+      font-weight: 200;
+
+
       
     }
+
+
+
     .lastdd-content {
       border-bottom: 1px solid black;
     }
+
+
     .dropdown-content a:hover {
-      background-color: var(--red)
+      background-color: var(--orange);
+      box-shadow: inset 0 1px 2px var(--white), 0 1px 2px var(--grey);
+      font-weight: 400;
+      
+      
     }
 
       /*Animation*/
@@ -186,6 +229,7 @@ body { /*OVERALL BODY*/
         height: 0px;
         opacity: 0%;
         
+        
       }
       to {
         
@@ -193,10 +237,15 @@ body { /*OVERALL BODY*/
         opacity: 100%;
         
       }
+
+      
     }
 
+
+
     .dropdown:hover .dropdown-content {
-      display: block;
+      display: flex;
+      flex-direction: column;
       
     }
 
@@ -209,13 +258,14 @@ body { /*OVERALL BODY*/
 
 .main {
   padding: 2rem;
-  
+  min-height: 35vh;
 }
 
 .main h2 {
   font-family: "Saira", sans-serif;
   text-align: center;
   color: var(--orange);
+  font-size: 2rem;
 }
 
 .main p {
@@ -231,6 +281,7 @@ body { /*OVERALL BODY*/
   border-top: 2px solid var(--black);
   border-bottom: 2px solid var(--black);
   padding-left: 2rem;
+  
   
 }
 .footer p {
@@ -262,14 +313,50 @@ body { /*OVERALL BODY*/
     'header header header'
     'main main main'
     'footer footer footer';
-  
-    grid-template-columns: auto 50%;
-  
     
   }
+
+
+.headline{
+  background-image: none;
+  border: none;
+}
+  .header{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(var(--darkred), var(--otherred), var(--otherred), var(--darkred));
+    padding-left: 2rem;
+    
+  }
+
   .container {
     display: flex;
     flex-direction: row; 
+    border-left: 1px solid black;
     
-  }
+    
+    
+}
+  .container li {
+    padding: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    
+    
+}
+.fa-bars { /*Burger menu icon styling, remove this in media query?*/
+  
+  float: right;
+  padding: .4rem;
+  padding-left: 2rem;
+   
+}
+
+
+.main {
+  min-height: 55vh;
+}
+
 }
