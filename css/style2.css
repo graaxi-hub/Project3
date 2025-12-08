@@ -92,6 +92,14 @@ body { /*OVERALL BODY*/
 
 /*Navigation*/
 
+a { /*Removing all attributes from the <a> tag */
+  text-decoration: none;
+  color: var(--white);
+}
+.dropdown a {
+  color: var(--black)
+}
+
 .container {
   display: flex;
   flex-direction: column; /*Change in media query*/
@@ -260,7 +268,7 @@ body { /*OVERALL BODY*/
 /*Main Styling*/
 
 .main {
-  padding: 2rem;
+  
   min-height: 35vh;
 }
 
@@ -269,11 +277,34 @@ body { /*OVERALL BODY*/
   text-align: center;
   color: var(--orange);
   font-size: 2rem;
+  margin-top: 2rem;
+  padding: 0;
 }
 
 .main p {
   font-family: "Raleway", sans-serif;
-  color: var(--white)
+  color: var(--white);
+  
+  margin-left: 2rem;
+  margin-right: 2rem;
+
+}
+
+.maincontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+.mainchild {
+  background-color: var(--lightgrey);
+  
+}
+
+.photo {
+  width: 40vw;
+  height: 40vw;
+  
 }
 
 /*Footer Styling*/
@@ -361,7 +392,27 @@ body { /*OVERALL BODY*/
 
 
 .main {
-  min-height: 55vh;
+  min-height: 70vh;
+}
+.maincontainer {
+  flex-direction: row;
+  
+  align-items: stretch;
+}
+  
+.mainchild {
+  margin-left: 20vw;
+  margin-right: 5vw;
+  
+}
+.mainchild2 {
+  margin-right: 20vw;
+ 
+}
+.photo {
+  width: 20vw;
+  height: 20vw;
+  
 }
 
 }
