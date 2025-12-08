@@ -65,7 +65,7 @@ body { /*OVERALL BODY*/
     color: var(--white);
     padding: 1rem;
     margin: 0px;
-
+    
     
     
 }
@@ -73,7 +73,7 @@ body { /*OVERALL BODY*/
 .headlinetext1 {
   font-size: 1rem;
   letter-spacing: .6em;  
-  
+  text-shadow: .2rem .2rem 3px var(--lightorange);
 }
 .headlinetext2 {
   
@@ -81,11 +81,13 @@ body { /*OVERALL BODY*/
   font-size: clamp(3rem, 2.5vw, 3.3rem);
   letter-spacing: .3em;  
   text-shadow: 2px 2px 5px var(--grey);
+  
 }
 .headlinetext3 {
   font-size: 1rem;
   text-align: right;
   letter-spacing: .6em;  
+  text-shadow: -.2rem -.2rem 3px var(--lightorange);
 }
 
 /*Navigation*/
@@ -114,19 +116,20 @@ body { /*OVERALL BODY*/
   font-size: 1.5rem;
   font-family: "Saira", sans-serif;
   font-weight: 200;
+  
   margin: .7rem;
   padding: .4rem;
   padding-left: 3rem;
   border-radius: 1rem;
   border: 2px solid var(--black);
   
-  
+  text-shadow: 2px 2px 5px var(--black);
   
 }
 
 .container .dropdown { /*Styling for the dropdownable nav list items*/
   background-color: var(--darkorange);
-  
+  text-shadow: 2px 2px 5px var(--lightgrey); /*overwriting the other shadow color cuz black was too much on the orange*/
 }
 
 .container .notdrop { /*Styling for the NOT dropdownable nav list items*/
@@ -281,12 +284,14 @@ body { /*OVERALL BODY*/
   border-top: 2px solid var(--black);
   border-bottom: 2px solid var(--black);
   padding-left: 2rem;
-  
+  background-color: var(--darkred);
+  opacity: 50%;
+  color: var(--white);
   
 }
 .footer p {
   padding: 0px;
-  margin: .3rem;
+  margin-left: 10vw;
 }
 
 /* Tablet */
@@ -334,7 +339,7 @@ body { /*OVERALL BODY*/
   .container {
     display: flex;
     flex-direction: row; 
-    border-left: 1px solid black;
+    border-left: 2px solid var(--black);
     
     
     
