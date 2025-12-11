@@ -40,7 +40,7 @@
                     </div>
                 </li>
 
-                <li class="notdrop"><i class="fa-regular fa-address-book"></i> <a href="contact.html">Contact</a> </li>
+                <a href="contact.html"><li class="notdrop"><i class="fa-regular fa-address-book"></i> Contact </li></a>
                 
             </ul>
         </nav>
@@ -52,12 +52,22 @@
     <main class="main">
         <h2>Mads <i>”Graaxi”</i> Jelager</h2>
         <div class="maincontainer">
-            <div class="mainchild">
-                contact
-            </div>
-            <div class="mainchild2">
-                <img class="photo" src="images/tempimage.jpg" alt="Temporary Image">
-            </div>
+            <!--Took most of this form from the example shown on w3schools, the form doesn't work and is just to show the design. Source: https://www.w3schools.com/howto/howto_css_contact_form.asp -->
+            <form action="action_page.php">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Your Name">
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" placeholder="insert@mail.here">
+
+                <label for="subject"></label>
+                <textarea name="subject" id="subject" placeholder="Your message.."></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+            
+
+
         </div>
       
         
