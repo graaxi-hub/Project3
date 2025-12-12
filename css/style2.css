@@ -279,6 +279,19 @@ a { /*Removing all attributes from the <a> tag */
   font-family: "Saira", sans-serif;
   text-align: center;
   color: var(--orange);
+  font-size: 3rem;
+  margin-top: 2rem;
+  padding: 0;
+  letter-spacing: .2rem;
+  font-weight: 300;
+  text-shadow: 2px 2px 5px var(--black);
+  
+}
+
+.main h3 {
+  font-family: "Saira", sans-serif;
+  text-align: center;
+  color: var(--orange);
   font-size: 2rem;
   margin-top: 2rem;
   padding: 0;
@@ -290,8 +303,10 @@ a { /*Removing all attributes from the <a> tag */
   font-family: "Raleway", sans-serif;
   color: var(--white);
   
+  
   margin-left: 2rem;
   margin-right: 2rem;
+  
 
 }
 
@@ -299,11 +314,26 @@ a { /*Removing all attributes from the <a> tag */
   display: flex;
   flex-direction: column;
   align-items: center;
+  
   margin: 1rem; 
+  
 }
+
+.maincontainer2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  margin: 1rem; 
+  
+}
+
 .mainchild {
   background-color: var(--lightgrey);
   text-align: center;
+  margin-bottom: 5rem;
+  
+  
 }
 .mainchild2 {
   background-color: var(--lightgrey);
@@ -315,7 +345,10 @@ a { /*Removing all attributes from the <a> tag */
   border: 1px solid var(--black);
   border-radius: 10px;
   margin-top: 1rem;
-  
+  max-width: 85vw;
+  max-height: 48vw;
+  width: 32rem;
+  height: 18rem;
 }
 
 
@@ -342,6 +375,57 @@ a { /*Removing all attributes from the <a> tag */
 .footer a:hover {
   text-shadow: 1px 1px 3px var(--grey);
   opacity: 100%;
+}
+
+/*Contact Form Styling*/
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--black);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  
+}
+
+
+
+.contactcontainer {
+  margin: auto;
+}
+
+
+
+textarea {
+
+  background-color: var(--white);
+  color: var(--white);
+}
+#subject {
+  color: var(--white);
+}
+
+input[type=submit] {
+  background-color: var(--orange);
+  color: var(--white);
+  padding: 1rem;
+  border: 1px solid var(--black);
+  border-radius: 4px;
+}
+input[type=submit]:hover {
+  background-color: var(--lightorange);
+
+}
+
+
+/*Videos styling*/
+
+iframe {
+  max-width: 85vw;
+  max-height: 48vw;
 }
 
 /* Tablet */
@@ -375,6 +459,7 @@ a { /*Removing all attributes from the <a> tag */
 .headline{
   background-image: none;
   border: none;
+  
 }
 
 .header{
@@ -385,6 +470,13 @@ a { /*Removing all attributes from the <a> tag */
     background-image: linear-gradient(var(--darkred), var(--otherred), var(--otherred), var(--darkred));
     padding-left: 2rem;
     box-shadow: 0px 5px 10px var(--black);
+}
+
+.headlinetext2 {
+  
+  
+  font-size: clamp(1.5rem, 2.5vw, 3.3rem);
+  
 }
 
   .container {
@@ -411,24 +503,73 @@ a { /*Removing all attributes from the <a> tag */
 }
 
 
+
 .main {
   min-height: 70vh;
 }
+
+
 .maincontainer {
   flex-direction: row;
-  
-  align-items: stretch;
+  align-items: flex-start;
+  gap: 10vw;
 }
-  
+
+
+
+
 .mainchild {
-  margin-left: 20vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+  
+}
+.mainchild2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+
+.mainchild {
+  
+  margin-left: 10vw;
   margin-right: 5vw;
   
 }
 .mainchild2 {
-  margin-right: 20vw;
- 
+  margin-right: 10vw;
+  
 }
+
+
+
+
+/*Videos styling*/
+
+iframe {
+  max-width: 25vw;
+  max-height: 14vw;
+}
+
+/*Photo styling*/
+
+.photo {
+  max-width: 25vw;
+  max-height: 14vw;
+  width: 32rem;
+  height: 18rem;
+}
+
+
+.contactcontainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
 /*
 .photo {
   width: 20vw;
