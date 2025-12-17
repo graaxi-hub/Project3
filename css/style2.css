@@ -393,12 +393,7 @@ a { /*Removing all attributes from the <a> tag */
   max-height: 48vw;
 }
 
-.photo2 {
-  border: 1px solid var(--black);
-  border-radius: 10px;
-  
- 
-}
+
 
 
 .hamphoto {
